@@ -6,6 +6,7 @@ var svc = new Service({
   script: script
 });
 svc.on('install',function(){
+  console.log('service installed!');
   console.log('starting service...');
   svc.start();
 });
@@ -14,8 +15,8 @@ svc.on('uninstall',function(){
   console.log('installing service again...');
   svc.install();
 });
-svc.on('alreadyInstalled', function(){
+svc.on('alreadyinstalled', function(){
   console.log('service already installed. uninstalling...');
   svc.uninstall();
 });
-svc.uninstall();
+svc.install();
