@@ -25,7 +25,7 @@ packages:
   '@*/*':
     # scoped packages
     access: $all
-    publish: $authenticated
+    publish: none
     proxy: npmjs
 
   '*':
@@ -38,7 +38,7 @@ packages:
 
     # allow all known users to publish packages
     # (anyone can register by default, remember?)
-    publish: $authenticated
+    publish: none
 
     # if package is not available locally, proxy requests to 'npmjs' registry
     proxy: npmjs
